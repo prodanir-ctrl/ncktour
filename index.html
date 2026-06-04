@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCK Tournament | Главная страница турниров</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="nav">
+            <div class="logo">🎮 NCK Tournament</div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">ГЛАВНАЯ</a>
+                <a href="cs2.html" class="nav-link">CS2</a>
+                <a href="dota2.html" class="nav-link">DOTA 2</a>
+                <a href="valorant.html" class="nav-link">VALORANT</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="hero">
+            <h1>🏆 Киберспортивные турниры 2026</h1>
+            <p>CS2 · Dota 2 · Valorant — лучшие соревнования, эпичные моменты и миллионные призовые</p>
+            <button class="card-btn" style="background:#ff8c42; margin:0 auto; display:inline-block;" id="welcomeBtn">🔥 Смотреть турниры 🔥</button>
+        </div>
+
+        <h2 class="section-title">🎮 Популярные дисциплины</h2>
+        <div class="games-grid">
+            <div class="game-card" data-game="cs2">
+                <img src="img/cs2.png" alt="CS2" class="card-img">
+                <h3>Counter-Strike 2</h3>
+                <p>Легендарный тактический шутер. Major, ESL, IEM — всё здесь.</p>
+                <button class="card-btn cs2-btn">Перейти к турнирам →</button>
+            </div>
+            <div class="game-card" data-game="dota2">
+                <img src="img/dota2.jpeg" alt="Dota 2" class="card-img">
+                <h3>Dota 2</h3>
+                <p>The International, эпичные битвы, стратегия и драфты.</p>
+                <button class="card-btn dota2-btn">Перейти к турнирам →</button>
+            </div>
+            <div class="game-card" data-game="valorant">
+                <img src="img/valorant.jpg" alt="Valorant" class="card-img">
+                <h3>Valorant</h3>
+                <p>VCT, Masters, Champions — тактический шутер от Riot Games.</p>
+                <button class="card-btn valorant-btn">Перейти к турнирам →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>🎉 Добро пожаловать!</h2>
+            <p>На нашем портале вы найдёте актуальные турниры по CS2, Dota 2 и Valorant. Кликайте на карточки или кнопки, чтобы узнать больше о каждом турнире!</p>
+            <button id="modalCloseBtn" class="modal-btn">Понятно, погнали!</button>
+        </div>
+    </div>
+</main>
+
+<footer class="footer container">
+    <p>© 2026 NCK Tournament — главный киберспортивный гид. Все турниры официальные.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
