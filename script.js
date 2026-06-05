@@ -84,3 +84,4 @@ document.addEventListener('DOMContentLoaded', () => {
             if (game === 'valorant') window.location.href = 'valorant.html';
         });
     });
+});
