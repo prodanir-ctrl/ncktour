@@ -83,3 +83,4 @@ document.addEventListener('DOMContentLoaded', () => {
             if (game === 'dota2') window.location.href = 'dota2.html';
             if (game === 'valorant') window.location.href = 'valorant.html';
         });
+    });
