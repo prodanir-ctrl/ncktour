@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Модальное окно
     const modal = document.getElementById('modal');
     const closeModalBtn = document.querySelector('.close-modal');
     const modalCloseBtn = document.getElementById('modalCloseBtn');
     const welcomeBtn = document.getElementById('welcomeBtn');
 
+    // Функция открытия модалки
     function openModal(title = 'Добро пожаловать!', message = 'Нажмите на любой турнир, чтобы узнать детали.') {
         const modalContent = document.querySelector('.modal-content');
         if (modalContent && !modalContent.querySelector('.custom-message')) {
@@ -32,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === modal) closeModal();
     });
 
+    // Функция для создания модального окна с деталями турнира
     function showTournamentDetails(tournamentName) {
         const detailsModal = document.createElement('div');
         detailsModal.className = 'modal';
@@ -57,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Обработчики для кнопок "Подробнее" на всех турнирных карточках
     const detailButtons = document.querySelectorAll('.details-btn');
     detailButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -66,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Кликабельные кнопки на главной (переход на страницы игр)
     const cs2Btn = document.querySelector('.cs2-btn');
     const dota2Btn = document.querySelector('.dota2-btn');
     const valorantBtn = document.querySelector('.valorant-btn');
@@ -74,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (dota2Btn) dota2Btn.addEventListener('click', () => window.location.href = 'dota2.html');
     if (valorantBtn) valorantBtn.addEventListener('click', () => window.location.href = 'valorant.html');
 
+    // Клик по карточкам игр на главной (дополнительно)
     const gameCards = document.querySelectorAll('.game-card');
     gameCards.forEach(card => {
         card.addEventListener('click', (e) => {
@@ -84,4 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (game === 'valorant') window.location.href = 'valorant.html';
         });
     });
+
+    console.log('Сайт загружен, все кнопки и модальные окна работают!');
 });
